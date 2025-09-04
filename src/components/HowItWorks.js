@@ -9,7 +9,7 @@ function HowItWorks() {
       description: 'まずは新しいことに挑戦する勇気から。PISTAで最初の一歩を踏み出しましょう。',
       details: ['目標設定のサポート', '適性診断', '個別カウンセリング'],
       icon: '💪',
-      kanji: '挑'
+      kanji: 'challenge'
     },
     {
       number: '02', 
@@ -17,7 +17,7 @@ function HowItWorks() {
       description: '成功するための環境づくり。仲間やメンターとのつながりを構築します。',
       details: ['コミュニティ参加', 'メンター制度', 'ネットワーキング'],
       icon: '🌱',
-      kanji: '整'
+      kanji: 'arrange'
     },
     {
       number: '03',
@@ -25,7 +25,7 @@ function HowItWorks() {
       description: '実際の案件に取り組み、実践的なスキルと経験を積み重ねていきます。',
       details: ['実案件参加', 'ポートフォリオ作成', 'フィードバック'],
       icon: '🛠️',
-      kanji: '実'
+      kanji: 'project'
     },
     {
       number: '04',
@@ -33,7 +33,7 @@ function HowItWorks() {
       description: 'より高いレベルの仕事を目指し、専門性と品質を磨き上げます。',
       details: ['スキル向上', '品質管理', '専門性の追求'],
       icon: '⭐',
-      kanji: '磨'
+      kanji: 'quality'
     },
     {
       number: '05',
@@ -41,7 +41,7 @@ function HowItWorks() {
       description: '努力の成果として正当な報酬を得て、フリーランスとしての地位を確立します。',
       details: ['収入の安定化', '評価向上', '独立達成'],
       icon: '👑',
-      kanji: '成'
+      kanji: 'rewards'
     }
   ];
 

@@ -73,16 +73,16 @@ function TargetUsers() {
               {[
                 {
                   name: "田中 雅人",
-                  age: "32歳",
+                  age: "25歳",
                   occupation: "フリーランスデザイナー",
                   activity: "バスケットボール部活",
                   quote: "毎週のバスケで体力がつき、集中力も向上。クライアントワークの効率が格段に上がりました。",
                   image: "🏀",
-                  result: "月収20%アップ"
+                  result: "月収50%アップ"
                 },
                 {
                   name: "佐藤 美香",
-                  age: "28歳", 
+                  age: "22歳", 
                   occupation: "エンジニア",
                   activity: "ヨガ部活",
                   quote: "ストレス解消と柔軟性向上で、長時間のコーディングも苦にならなくなりました。",
@@ -91,7 +91,7 @@ function TargetUsers() {
                 },
                 {
                   name: "山田 健太",
-                  age: "35歳",
+                  age: "20歳",
                   occupation: "コンサルタント", 
                   activity: "ランニング部活",
                   quote: "朝ランで一日の生産性が大幅向上。同じ目標を持つ仲間とのネットワークも広がりました。",
