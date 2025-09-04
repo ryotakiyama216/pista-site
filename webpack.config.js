@@ -32,11 +32,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      filename: 'index.html' 
     }),
   ],
   devServer: {
     static: path.join(__dirname, 'dist'),
-    port: 3000,
+    port: 3003,
     open: true,
   },
   mode: 'development',
