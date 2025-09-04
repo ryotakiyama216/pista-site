@@ -1,0 +1,146 @@
+.features {
+  background: #f8fafc;
+  position: relative;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.features-header h2 {
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.features-subtitle {
+  font-size: 1.2rem;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #ff6b6b;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.feature-description {
+  color: #4a5568;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.features-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 40px;
+  border-radius: 20px;
+  color: white;
+}
+
+.features-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.features-cta .btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+  font-size: 1.1rem;
+  padding: 18px 40px;
+}
+
+.features-cta .btn:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .feature-card {
+    padding: 30px 25px;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    height: 70px;
+  }
+  
+  .feature-title {
+    font-size: 1.3rem;
+  }
+  
+  .features-cta {
+    padding: 40px 20px;
+  }
+  
+  .features-cta h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    padding: 25px 20px;
+  }
+  
+  .features-cta h3 {
+    font-size: 1.4rem;
+  }
+  
+  .features-cta .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

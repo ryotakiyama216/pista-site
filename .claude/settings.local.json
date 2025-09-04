@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod:*)",
+      "Bash(npx create-react-app:*)",
+      "Bash(npm install)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

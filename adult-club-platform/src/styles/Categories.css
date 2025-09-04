@@ -1,0 +1,275 @@
+.categories {
+  background: #f8fafc;
+  position: relative;
+}
+
+.categories-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.categories-header h2 {
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.categories-subtitle {
+  font-size: 1.2rem;
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.tab-button:hover {
+  border-color: #667eea;
+  color: #667eea;
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+}
+
+.tab-name {
+  font-weight: 600;
+}
+
+.category-content {
+  min-height: 600px;
+  transition: all 0.3s ease;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.category-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.category-image {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.category-description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.category-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  padding: 15px 0;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  display: block;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+  width: 100%;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.categories-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 40px;
+  border-radius: 20px;
+  color: white;
+}
+
+.categories-cta h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.categories-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.categories-cta .btn {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+}
+
+.categories-cta .btn-primary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+}
+
+.categories-cta .btn-primary:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-3px);
+}
+
+.categories-cta .btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.categories-cta .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .category-tabs {
+    gap: 8px;
+  }
+  
+  .tab-button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .tab-name {
+    display: none;
+  }
+  
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .category-card {
+    padding: 25px 20px;
+  }
+  
+  .categories-cta {
+    padding: 40px 30px;
+  }
+  
+  .categories-cta h3 {
+    font-size: 1.6rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .categories-cta .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-cta {
+    padding: 30px 20px;
+  }
+  
+  .tab-button {
+    padding: 10px 15px;
+  }
+}

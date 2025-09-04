@@ -1,0 +1,169 @@
+.kanji-hero {
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  pointer-events: none;
+}
+
+.kanji-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.kanji-display {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kanji-character {
+  font-size: 8rem;
+  font-weight: 900;
+  color: transparent;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Hiragino Mincho ProN', '游明朝', 'YuMincho', serif;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.kanji-character.animate-in {
+  animation: kanjiSlide 3s ease-in-out;
+}
+
+@keyframes kanjiSlide {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8) rotate(-10deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1)) blur(4px);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1) rotate(0deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2)) blur(0px);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15)) blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9) rotate(5deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1)) blur(2px);
+  }
+}
+
+.kanji-info {
+  text-align: center;
+  opacity: 0.8;
+}
+
+.kanji-meaning {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  font-family: 'Inter', sans-serif;
+}
+
+.kanji-description {
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.kanji-indicators {
+  display: flex;
+  gap: 8px;
+  pointer-events: all;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(45, 55, 72, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  transform: scale(1.2);
+  box-shadow: 0 0 12px rgba(26, 32, 44, 0.4);
+}
+
+.indicator:hover:not(.active) {
+  background: rgba(45, 55, 72, 0.5);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .kanji-hero {
+    right: 3%;
+  }
+  
+  .kanji-character {
+    font-size: 6rem;
+  }
+  
+  .kanji-display {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kanji-hero {
+    position: static;
+    transform: none;
+    margin: 40px auto;
+    opacity: 0.6;
+  }
+  
+  .kanji-character {
+    font-size: 4rem;
+  }
+  
+  .kanji-display {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .kanji-info {
+    display: none;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .kanji-character.animate-in {
+    animation: none;
+  }
+  
+  .kanji-character {
+    opacity: 1;
+  }
+}

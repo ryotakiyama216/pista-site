@@ -1,0 +1,189 @@
+.animated-background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.floating-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  animation: float var(--duration, 10s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.shape-1 {
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 10%;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 217, 61, 0.1) 100%);
+}
+
+.shape-2 {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  right: 15%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+}
+
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 5%;
+  background: linear-gradient(135deg, rgba(255, 217, 61, 0.08) 0%, rgba(255, 107, 107, 0.08) 100%);
+}
+
+.shape-4 {
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  right: 20%;
+  background: linear-gradient(135deg, rgba(118, 75, 162, 0.2) 0%, rgba(102, 126, 234, 0.2) 100%);
+}
+
+.shape-5 {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  right: 10%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.shape-6 {
+  width: 90px;
+  height: 90px;
+  top: 40%;
+  left: 20%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(255, 217, 61, 0.12) 100%);
+}
+
+.gradient-orbs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -3;
+  overflow: hidden;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: pulse var(--duration, 8s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  top: -200px;
+  right: -200px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, rgba(102, 126, 234, 0) 70%);
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  bottom: -250px;
+  left: -250px;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.25) 0%, rgba(255, 107, 107, 0) 70%);
+}
+
+.orb-3 {
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 217, 61, 0.2) 0%, rgba(255, 217, 61, 0) 70%);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-20px) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-20px) rotate(270deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .floating-shape,
+  .gradient-orb {
+    animation: none;
+  }
+  
+  .animated-background-canvas {
+    display: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .floating-shape {
+    animation-duration: calc(var(--duration, 10s) * 1.5);
+  }
+  
+  .gradient-orb {
+    filter: blur(20px);
+  }
+  
+  .orb-1 {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .orb-2 {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .orb-3 {
+    width: 200px;
+    height: 200px;
+  }
+}
