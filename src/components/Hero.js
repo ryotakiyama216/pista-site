@@ -9,7 +9,7 @@ function Hero() {
           <div className="hero-text">
             <h1>
               大人のための<br />
-              <span className="highlight">新しい挑戦</span>がここに
+              <span className="highlight">新しい挑戦</span>が<br />ここに
             </h1>
             <p className="hero-description">
               バスケ・フットサル・ヨガ・クッキング・ラン・ダンス。<br />

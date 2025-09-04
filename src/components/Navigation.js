@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Navigation.css';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,13 +17,13 @@ function Navigation() {
   }, []);
 
   const menuItems = [
-    { label: 'About Us', href: '#about', icon: '💡' },
-    { label: 'Project', href: '#project', icon: '🚀' },
-    { label: 'PISTA', href: '#pista', icon: '🎯' },
-    { label: 'Platform', href: '#platform', icon: '🌐' },
-    { label: 'CRF', href: '#crf', icon: '🔬' },
-    { label: 'Model', href: '#model', icon: '📊' },
-    { label: 'Members', href: '#members', icon: '👥' }
+    { label: 'About Us', href: 'about', icon: '💡' },
+    { label: 'Project', href: 'project', icon: '🚀' },
+    { label: 'PISTA', href: 'pista', icon: '🎯' },
+    { label: 'Platform', href: 'platform', icon: '🌐' },
+    { label: 'CRF', href: 'crf', icon: '🔬' },
+    { label: 'Model', href: 'model', icon: '📊' },
+    { label: 'Members', href: 'members', icon: '👥' }
   ];
 
   const toggleMobileMenu = () => {
@@ -35,7 +36,7 @@ function Navigation() {
         <div className="nav-brand">
           <div className="logo-container">
             <span className="logo-icon">⚡</span>
-            <span className="logo-text">PISTA</span>
+            <span className="logo-text"><Link to="/">PISTA</Link></span>
           </div>
           <div className="brand-tagline">Adult Club Platform</div>
         </div>
@@ -43,16 +44,16 @@ function Navigation() {
         {/* Desktop Menu */}
         <div className="nav-menu desktop-menu">
           {menuItems.map((item, index) => (
-            <a 
+            <Link 
               key={index} 
-              href={item.href} 
+              to={item.href} 
               className="nav-item"
               style={{ '--delay': `${index * 0.1}s` }}
             >
               <span className="nav-icon">{item.icon}</span>
               <span className="nav-label">{item.label}</span>
               <div className="nav-item-bg"></div>
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -88,9 +89,9 @@ function Navigation() {
           </div>
           <div className="mobile-menu-items">
             {menuItems.map((item, index) => (
-              <a 
+              <Link 
                 key={index} 
-                href={item.href} 
+                to={item.href} 
                 className="mobile-nav-item"
                 onClick={() => setIsMobileMenuOpen(false)}
                 style={{ '--mobile-delay': `${index * 0.05}s` }}
@@ -98,7 +99,7 @@ function Navigation() {
                 <span className="mobile-nav-icon">{item.icon}</span>
                 <span className="mobile-nav-label">{item.label}</span>
                 <div className="mobile-nav-arrow">→</div>
-              </a>
+              </Link>
             ))}
           </div>
           <div className="mobile-menu-footer">
